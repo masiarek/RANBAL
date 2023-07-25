@@ -20,12 +20,6 @@ __doc__ = "Create Random Elections and Random Ballots"
 __version__ = "0.0.2"
 
 __all__ = [
-    'Method', # class for method metadata
-    'methods', # maps string to Methods
-    'load_starvote_file', # function
-    'Options', # class
-    'STAR_Voting', # Method
-    'star', # Method (nickname)
     'UsageException', # exception class
     ]
 
@@ -74,8 +68,8 @@ def ranbal(cand=4, ball=3, elec=1, seed=None, sparsity='medium', max=_DEFAULT_MA
         candidates = ", ".join(cand_names)
         print(candidates)
         ball_init = [[0] * cand for i in range(ball)]
-        fav_index_1 = random.randint(0, cand - 1)
-        fav_index_2 = random.randint(0,cand - 1)
+        fav_index_1 = random.randint(0, cand - 1) # assume some candidates are preferred
+        fav_index_2 = random.randint(0,cand - 1)  # by majority of voters
         print(fav_index_1, fav_index_2)
         for e in ball_init:
             if sparsity == 'high': # each row should have at least one/two scores
@@ -95,4 +89,4 @@ def ranbal(cand=4, ball=3, elec=1, seed=None, sparsity='medium', max=_DEFAULT_MA
                         e[fav_index_2] = random.randint(3, max)
             print(e)
 
-ranbal(cand=4, ball=9, elec=1, sparsity='high', max=_DEFAULT_MAXIMUM_SCORE)
+ranbal(cand=4, ball=22, elec=1, sparsity='high')
