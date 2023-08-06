@@ -1,0 +1,15 @@
+[options]
+method=star
+tiebreaker = none
+verbosity = 1
+
+[ballots]
+3 ballots:
+Ann  = 5
+Bob  = 0
+Carl = 0
+
+2 ballots:
+Ann  = 0
+Bob  = 0
+Carl = 5

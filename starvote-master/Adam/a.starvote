@@ -1,0 +1,18 @@
+[options]
+
+    method = star
+    tiebreaker = None
+    verbosity = 1
+
+[ballots]
+
+2 ballots:
+A=5
+B=4
+C=0
+D=0
+
+A=0
+B=4
+C=0
+D=5

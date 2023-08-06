@@ -1,0 +1,18 @@
+# Different Winner between Scoring and Runoff
+
+[options]
+method=star
+tiebreaker = none
+verbosity = 1
+
+[ballots]
+3 ballots:
+Ann  = 5
+Bob  = 4
+Carl = 3
+
+2 ballots:
+Ann  = 0
+Bob  = 3
+Carl = 5
+
