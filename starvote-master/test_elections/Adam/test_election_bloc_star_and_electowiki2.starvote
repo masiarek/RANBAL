@@ -1,0 +1,31 @@
+[options]
+
+    method = bloc
+    seats = 4
+    verbosity = 1
+    tiebreaker = none
+[ballots]
+
+    8 ballots:
+        First = 3
+        Condorcet Loser = 0
+        Second = 1
+        Third = 1
+        Fourth = 1
+
+    5 ballots:
+        Condorcet Loser = 4
+
+    2 ballots:
+        First = 0
+        Condorcet Loser = 1
+        Second = 3
+        Third = 2
+        Fourth = 1
+
+    1 ballot:
+        First = 0
+        Condorcet Loser = 2
+        Second = 5
+        Third = 4
+        Fourth = 3

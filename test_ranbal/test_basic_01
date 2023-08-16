@@ -1,4 +1,0 @@
-[options]
-seed = 1 # repeatable results
-cand = 3 # number of Candidates
-elec = 1 # number of Elections

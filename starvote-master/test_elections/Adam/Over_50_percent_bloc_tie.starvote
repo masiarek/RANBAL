@@ -1,0 +1,19 @@
+[options]
+method=bloc
+seats = 2
+tiebreaker = none
+verbosity = 1
+
+[ballots]
+	A = 5
+	B = 0
+	C = 0
+
+	A = 5
+	B = 1
+	C = 0
+
+	A = 5
+	B = 0
+	C = 1
+
