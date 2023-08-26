@@ -1,0 +1,35 @@
+# https://rangevoting.org/IRVamp.html
+[options]
+
+    method = star
+    tiebreaker = None
+    verbosity = 1
+
+[ballots]
+
+1000 ballots:
+z = 5
+
+512 ballots:
+p = 5
+a = 4
+
+256 ballots:
+q = 5
+a = 4
+
+128 ballots:
+r = 3
+a = 2
+
+64 ballots:
+s = 3
+a = 2
+
+32 ballots:
+t = 3
+a = 2
+
+16 ballots:
+u = 3
+a = 2

@@ -1,0 +1,65 @@
+# example from https://www.votingtheory.org/forum/topic/385/allocated-score-star-pr-centrist-clones-concern/4?_=1692619452113
+
+[options]
+
+    method = sss
+    seats = 2
+    tiebreaker = none
+    verbosity = 1
+
+[ballots]
+
+100 ballots: 
+A=5 
+Gs=1
+
+100 ballots: 
+B=5 
+Gs=1
+
+100 ballots: 
+C=5 
+Gs=1
+
+100 ballots: 
+D=5 
+Gs=1
+
+100 ballots: 
+E=5 
+Gs=1
+
+100 ballots: 
+F=5 
+Gs=1
+
+# [Sequentially Spent Score]
+#   Tabulating 600 ballots.
+#   Maximum score is 5.
+#   Want to fill 2 seats.
+#   Hare score quota is 1500.
+# [Sequentially Spent Score: Round 1]
+#   The highest-scoring candidate wins a seat.
+#     Gs -- 600 (average 1)   -- First place
+#     A  -- 500 (average 5/6)
+#     B  -- 500 (average 5/6)
+#     C  -- 500 (average 5/6)
+#     D  -- 500 (average 5/6)
+#     E  -- 500 (average 5/6)
+#     F  -- 500 (average 5/6)
+#   Gs wins a seat.
+# [Sequentially Spent Score: Round 1: Ballot allocation round]
+#   Total score is 600, Hare score quota is 1500, no surplus to give back.
+#   Reducing each ballot's stars by their vote.
+#   600 ballots voted 1, stars reduced from 5 to 4, reweighted to 4/5.
+# [Sequentially Spent Score: Round 2]
+#   The highest-scoring candidate wins a seat.
+#     A -- 400 (average 2/3) -- Tied for first place
+#     B -- 400 (average 2/3) -- Tied for first place
+#     C -- 400 (average 2/3) -- Tied for first place
+#     D -- 400 (average 2/3) -- Tied for first place
+#     E -- 400 (average 2/3) -- Tied for first place
+#     F -- 400 (average 2/3) -- Tied for first place
+#   There's a six-way tie for first.
+# [Sequentially Spent Score: Round 2: Unbreakable Tie]
+#   Tie between A, B, C, D, E, and F.

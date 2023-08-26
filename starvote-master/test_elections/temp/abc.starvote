@@ -1,0 +1,18 @@
+[options]
+method=adam
+seats = 1
+tiebreaker = none
+verbosity = 1
+
+[ballots]
+	A = 5
+	B = 0
+	C = 0
+
+	A = 4
+	B = 1
+	C = 0
+
+	A = 3
+	B = 0
+	C = 2
