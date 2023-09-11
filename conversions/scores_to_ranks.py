@@ -1,19 +1,23 @@
-"""
-from
-A,B,C,D,E,F
-2,5,0,3,5,4
-
-to
-B>E>F>D>A>C
-
-"""
-
 scores = """\
 A,B,C,D,E,F
 2,5,0,3,5,4
+2,5,0,3,5,5
+0,5,0,3,5,1
 """
 
-l = scores.split()
-print(l[0])
-# for e in lst[0]:
-#     lst[e] = 0
+lst = scores.split("\n")
+
+k = lst[0].split(",")
+print(*k, sep=",")
+
+for row in lst[1:]:
+    a = row.split(",")
+    mapping = {0: 6, 1: 5, 2: 4, 3: 3, 4: 2, 5: 1}
+    r = [mapping[int(x)] if x.strip() else "" for x in a]
+    print(*r, sep=",")
+"""
+B>E>F>D>A>C
+B>E>F>D>A>C
+B>E>D>F>A>C
+
+"""
