@@ -3,9 +3,10 @@ import string
 
 DEFAULT_SEATS = 1
 MAX_SCORE = 5
-candidates = 4
+candidates = 3
 ballots = 5
 elections = 3
+
 
 def ranbal(cand=candidates, ball=ballots, seed=None, max=MAX_SCORE):
     if ball < 2:
@@ -20,9 +21,10 @@ def ranbal(cand=candidates, ball=ballots, seed=None, max=MAX_SCORE):
 
     ball_init = [[0] * cand for i in range(ball)]
     for e in ball_init:
-        index1 = random.randint(0,cand - 1)
+        index1 = random.randint(0, cand - 1)
         e[index1] = random.randint(1, max)
     return (candidates, ball_init)
+
 
 candidates, ballots = ranbal()
 print(candidates)
@@ -32,14 +34,14 @@ for e in ballots:
 
 # how to feed the 'candidates' and random 'ballots' to
 # starvote-master/starvote/__init__.py
-#step one - reformat from
+# step one - reformat from
 """
-A, B, C, D
+Cab, B, C, D
 [5,2, 4, 1]
 """
 # to expected format
 """
-A = 5
+Cab = 5
 B = 2
 C = 4
 D = 1

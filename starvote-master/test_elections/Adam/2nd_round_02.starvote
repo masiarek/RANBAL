@@ -1,0 +1,7 @@
+[options]
+
+    csv_path = 2nd_round_02.csv
+    method = star
+   # seats = 3
+    tiebreaker = none
+    verbosity = 1

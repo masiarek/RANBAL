@@ -1,0 +1,57 @@
+[options]
+
+    method = star
+    tiebreaker = None
+    verbosity = 1
+
+# [ballots]
+
+# 21 ballots:
+# A = 5
+# B = 4
+# C = 3
+# D = 2
+
+# 12 ballots:
+# C = 5
+# D = 4
+# B = 3
+# A = 2
+
+# 5 ballots:
+# D = 5
+# C = 4
+# A = 3
+# B = 2
+
+# 12 ballots:
+# B = 5
+# D = 4
+# A = 3
+# C = 2
+
+# sorted by candidate:
+[ballots]
+21 ballots:
+A = 5
+B = 4
+C = 3
+D = 2
+
+12 ballots:
+A = 2
+B = 3
+C = 5
+D = 4
+
+5 ballots:
+A = 3
+B = 2
+C = 4
+D = 5
+
+12 ballots:
+A = 3
+B = 5
+C = 2
+D = 4

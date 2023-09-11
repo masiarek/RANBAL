@@ -1,0 +1,7 @@
+[options]
+
+    csv_path = csv_test.csv
+    method = bloc
+    seats = 3
+    tiebreaker = none
+    verbosity = 1

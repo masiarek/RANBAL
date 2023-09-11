@@ -1,19 +1,22 @@
 from collections import defaultdict
 
+
+# not working correctly!!!
+
 # Example ballots text
 ballots_text = """
-1000 Z>P>Q>R>S>T>U>V>W>X>Y>A
-512  P>Q>R>S>T>U>V>W>X>Y>A>Z
-256  Q>R>S>T>U>V>W>X>Y>A>P>Z
-128  R>S>T>U>V>W>X>Y>A>P>Z>Q
-64   S>T>U>V>W>X>Y>A>P>Z>Q>R
-32   T>U>V>W>X>Y>A>P>Z>Q>R>S
-16   U>V>W>X>Y>A>P>Z>Q>R>S>T
-8    V>W>X>Y>A>P>Z>Q>R>S>T>U
-4    W>X>Y>A>P>Z>Q>R>S>T>U>V
-2    X>Y>A>P>Z>Q>R>S>T>U>V>W
-1    Y>A>P>Z>Q>R>S>T>U>V>W>X
-2    A>P>Z>Q>R>S>T>U>V>W>X>Y
+1000 Z>P>Q>R>S>T>U>V>W>X>Y>Cab
+512  P>Q>R>S>T>U>V>W>X>Y>Cab>Z
+256  Q>R>S>T>U>V>W>X>Y>Cab>P>Z
+128  R>S>T>U>V>W>X>Y>Cab>P>Z>Q
+64   S>T>U>V>W>X>Y>Cab>P>Z>Q>R
+32   T>U>V>W>X>Y>Cab>P>Z>Q>R>S
+16   U>V>W>X>Y>Cab>P>Z>Q>R>S>T
+8    V>W>X>Y>Cab>P>Z>Q>R>S>T>U
+4    W>X>Y>Cab>P>Z>Q>R>S>T>U>V
+2    X>Y>Cab>P>Z>Q>R>S>T>U>V>W
+1    Y>Cab>P>Z>Q>R>S>T>U>V>W>X
+2    Cab>P>Z>Q>R>S>T>U>V>W>X>Y
 """
 
 # Parse the ballots text

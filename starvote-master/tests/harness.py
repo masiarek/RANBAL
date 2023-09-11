@@ -18,14 +18,16 @@ def _just_raise_tiebreaker(options, tie, desired, exception):
     """
     raise exception
 
+
 @_add_tiebreaker
-def _only_heading_tiebreaker(options, tie, desired, exception): # pragma: nocover
+def _only_heading_tiebreaker(options, tie, desired, exception):  # pragma: nocover
     """
-    This tiebreaker only has a heading, no description.
+    This tiebreaker only has ed heading, no description.
 
 
     """
     raise exception
+
 
 @_add_tiebreaker
 def _no_description_tiebreaker(options, tie, desired, exception):

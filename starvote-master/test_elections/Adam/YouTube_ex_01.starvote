@@ -1,0 +1,22 @@
+[options]
+
+    method = star
+    tiebreaker = None
+    verbosity = 1
+
+[ballots]
+
+6 ballots:
+Burger King = 5
+Pizza Hut = 4
+Dominos Pizza = 3
+
+5 ballots:
+Dominos Pizza = 5
+Pizza Hut = 4
+Burger King = 3
+
+4 ballots:
+Pizza Hut = 5
+Dominos Pizza = 4
+Burger King = 3

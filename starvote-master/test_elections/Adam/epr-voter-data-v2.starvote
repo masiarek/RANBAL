@@ -1,0 +1,10 @@
+# https://github.com/lsleonard/evaluative-proportional-representation/blob/master/EPR-Simulated-Election/epr-voter-data-v2.csv
+
+[options]
+
+    csv_path = epr-voter-data-v2.csv
+    method = sss
+    seats = 7
+    tiebreaker = none
+    verbosity = 1
+    maximum_score = 6

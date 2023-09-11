@@ -1,18 +1,13 @@
 [options]
 
     method = star
+    #seats = 5
     tiebreaker = None
     verbosity = 1
 
 [ballots]
-
-2 ballots:
-A=5
+4 ballots:
+A=3
 B=4
-C=0
-D=0
-
-A=0
-B=4
-C=0
+C=3
 D=5

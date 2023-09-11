@@ -1,0 +1,26 @@
+# https://docs.google.com/document/d/1WIeoU3iZbqjHUqfyBgsiwCZcTIypeqKX3A-wVoLhUf0/edit
+
+[options]
+  method = star
+  tiebreaker = none
+  verbosity = 1
+
+[ballots]
+
+40 ballots:
+  A = 4
+  B = 3
+  C = 2
+  D = 5
+
+35 ballots:
+  A = 3
+  B = 5
+  C = 4
+  D = 2
+
+25 ballots:
+  A = 4
+  B = 3
+  C = 5
+  D = 2

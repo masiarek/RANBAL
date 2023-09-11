@@ -1,18 +1,6 @@
 [options]
-method=adam
-seats = 1
+method=bloc
+seats = 2
 tiebreaker = none
 verbosity = 1
-
-[ballots]
-	A = 5
-	B = 0
-	C = 0
-
-	A = 4
-	B = 1
-	C = 0
-
-	A = 3
-	B = 0
-	C = 2
+csv_path = "/Volumes/T7/Voting/STAR_Voting_Software/RANBAL/starvote-master/test_elections/temp/abc.csv"

@@ -9,6 +9,9 @@
 ##     * confirms the "multi-winner elections" cmdline works
 ##   (I keep breaking 'em.)
 ##
+## * have starvote format import detect a recursion loop and complain
+##   A imports B, B imports A, you blow your stack.
+##
 ## * output
 ##     * alternate output format idea:
 ##         * make something more computer-readable.
@@ -19,7 +22,7 @@
 
 __doc__ = "An election tabulator for the STAR electoral system, and others"
 
-__version__ = "2.0.4"
+__version__ = "2.0.6"
 
 __all__ = [
     "Allocated_Score_Voting",  # Method
@@ -51,6 +54,29 @@ __all__ = [
     "UsageException",  # exception class
 ]
 
+
+LICENSE = """
+starvote
+Copyright 2023 by Larry Hastings
+
+Permission is hereby granted, free of charge, to any person obtaining a
+copy of this software and associated documentation files (the "Software"),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
+OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+""".strip()
 
 import builtins
 from collections import defaultdict
@@ -376,8 +402,8 @@ class predefined_permutation_tiebreaker(Tiebreaker):
         all_candidates = _candidates(ballots)
         if self.candidates is None:
             self.candidates = all_candidates
-            # random.shuffle(self.candidates)
-            # self.description = "Computing a random permutation of all the candidates."
+            random.shuffle(self.candidates)
+            self.description = "Computing a random permutation of all the candidates."
         else:
             if not self.candidates:
                 raise ValueError("no candidates")
@@ -429,7 +455,7 @@ class predefined_permutation_tiebreaker(Tiebreaker):
         return result
 
 
-_DEFAULT_MAXIMUM_SCORE = 99
+_DEFAULT_MAXIMUM_SCORE = 5
 _DEFAULT_PRINT = None
 _DEFAULT_SEATS = 1
 _DEFAULT_TIEBREAKER = predefined_permutation_tiebreaker
@@ -2757,7 +2783,6 @@ def load_csv_file(path):
 
     Returns a list of ballots.
     """
-
     if not isinstance(path, pathlib.Path):  # pragma: no cover
         path = pathlib.Path(path)
 
@@ -2767,7 +2792,7 @@ def load_csv_file(path):
         candidates = None
         for row in reader:
             # clip off voterid, date, and pollid
-            # row = row[3:]    # remove the first three columns
+            # row = row[3:]
             if candidates == None:
                 candidates = row
                 continue
