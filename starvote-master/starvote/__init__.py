@@ -2792,7 +2792,7 @@ def load_csv_file(path):
         candidates = None
         for row in reader:
             # clip off voterid, date, and pollid
-            # row = row[3:]
+            # row  =  row[3:]
             if candidates == None:
                 candidates = row
                 continue
